@@ -1,0 +1,152 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<title>BITSkrieg</title>
+
+		<link rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/monokai.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section data-background="/images/bitskrieg.png" data-background-size="contain">
+				</section>
+
+				<section>
+					<h2>Fields of Computer Security</h2>
+					<ol>
+						<li class="fragment">Network Security</li>
+						<li class="fragment">Cybersecurity</li>
+						<li class="fragment">Forensics</li>
+						<li class="fragment">Reverse Engineer</li>
+						<li class="fragment">Malware Analysis</li>
+						<li class="fragment">Penetration Testing</li>
+						<li class="fragment">Cryptography</li>
+						<li class="fragment">Hardware Security</li>
+					</ol>
+				</section>
+
+				<section>
+					<h2>Stuxnet</h2>
+				</section>
+
+				<section data-background-video="/images/bitskriegvid.mp4" data-background-video-muted="false" data-background-video-controls="true">
+
+				</section>
+
+				<section>
+					<h2>What can be done in Security Field?</h2>
+					<ul>
+						<li class="fragment">Security engineering jobs</li>
+						<li class="fragment">Bug bounties</li>
+						<li class="fragment">Capture the Flag</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Capture the flag</h2>
+					<p>BITSCTF{th1s_1s_y0ur_f1rst_flag}</p>
+					<ul>
+						<li class="fragment">Google CTF</li>
+						<li class="fragment">Facebook CTF</li>
+						<li class="fragment">CTFTime.org</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Bug bounties</h2>
+					<ul>
+						<li class="fragment">Exploits in real world</li>
+						<li class="fragment">Real companies, real users</li>
+						<li class="fragment">Pentesting live websites/apps</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>What we do as BITSkrieg?</h2>
+					<ul>
+						<li class="fragment">CTFs</li>
+						<li class="fragment">Discussions (club only)</li>
+						<li class="fragment">Lectures (public)</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Induction CTF</h2>
+					<p>https://bitskrieg-induction.cf</p>
+				</section>
+
+				<section>
+					<h2>See you at inductions </h2>
+					<h1>(Sept 1, 2019)</h1>
+				</section>
+			</div>
+		</div>
+
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+
+				transition: 'concave',
+				transitionSpeed: 'slow',
+
+				// Parallax background image
+	//parallaxBackgroundImage: "https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg",
+
+// Parallax background size
+//parallaxBackgroundSize:  "2100px 900px", //- currently only pixels are supported (don't use % or auto)
+
+// Number of pixels to move the parallax background per slide
+// - Calculated automatically unless specified
+// - Set to 0 to disable movement along an axis
+//parallaxBackgroundHorizontal: 200,
+//parallaxBackgroundVertical: 50,
+
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true }
+				]
+			});
+
+			Reveal.addEventListener( 'ready', () => {
+//				Reveal.slide(100)
+			});
+
+			(new MutationObserver(function(mutations, observer) {
+				mutations.reduce(function(accumulator, current) {
+					return accumulator.concat(Array.prototype.slice.call(
+						current.addedNodes));
+				}, []).forEach(function(el) {
+					if(/video/i.test(el.tagName)) {
+						el.controls = true;
+					}
+				});
+			})).observe(document.body, {
+				childList: true,
+				subtree: true
+			});
+
+		</script>
+	</body>
+</html>
